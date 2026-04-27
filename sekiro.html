@@ -8,11 +8,52 @@
 
 <style>
 body {
+
   margin: 0;
-  background: url("https://i.pcmag.com/imagery/reviews/015s7W8bORumChblqFNWD34-1..v1569469930.jpg") no-repeat center center fixed;
+  background: url("img/sekiro_background.webp") no-repeat center center fixed;
   background-size: cover;
   color: #f4f4f5;
   font-family: Arial, sans-serif;
+}
+
+.about {
+  margin-top: 40px;
+  padding: 20px;
+
+  background: rgba(0,0,0,0.85); /* 👈 sfondo nero */
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.about img {
+  width: 70px;
+  height: 80px;
+  border-radius: 0px;
+  object-fit: cover;
+  border: 0px solid #fca5a5;
+}
+
+.about-text h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.about-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #a1a1aa;
+}
+
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .ash {
@@ -627,7 +668,21 @@ detailClose.onclick = () => {
 };
 
 window.onscroll = () => {
-  topBtn.style.display = window.scrollY > 250 ? "block" : "none";
+  const scrollY = window.scrollY;
+  const pageHeight = document.body.scrollHeight;
+  const windowHeight = window.innerHeight;
+
+  // mostra il bottone
+  topBtn.style.display = scrollY > 250 ? "block" : "none";
+
+  // distanza dal fondo
+  const distanzaDalFondo = pageHeight - (scrollY + windowHeight);
+
+  if (distanzaDalFondo < 120) {
+    topBtn.style.bottom = "120px"; // 👈 lo alzi sopra la descrizione
+  } else {
+    topBtn.style.bottom = "20px"; // posizione normale
+  }
 };
 
 topBtn.onclick = () => {
@@ -640,6 +695,17 @@ category.onchange = mostra;
 creaCenere();
 mostra();
 </script>
+
+<div class="about">
+  <img src="img/ember_avatar.png" alt="Avatar">
+
+  <div class="about-text">
+    <h3>Steniichi</h3>
+    <p>
+      Studio la lingua giapponese e, per passione, mi dedico alla traduzione di diversi tipi di media. Il mio obiettivo è rendere i contenuti non solo comprensibili, ma anche il più possibile fedeli al significato originale. Ho creato questo sito per raccogliere e condividere tutti i miei lavori, offrendo un punto di riferimento per chi è interessato a traduzioni curate e attente ai dettagli.
+    </p>
+  </div>
+</div>
 
 </body>
 </html>
