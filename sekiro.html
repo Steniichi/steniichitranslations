@@ -3,31 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Traduzioni Sekiro</title>
+
 <link rel="icon" type="image/png" href="img/ember_icon.png">
-<button class="home-btn" onclick="goHome()">← Home</button>
 
 <style>
 body {
   margin: 0;
-  background: url("img/sekiro_background.webp") no-repeat center center fixed;
+  background: url("https://i.pcmag.com/imagery/reviews/015s7W8bORumChblqFNWD34-1..v1569469930.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #f4f4f5;
   font-family: Arial, sans-serif;
-}
-
-.home-btn {
-  margin-bottom: 20px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #fca5a5;
-  color: black;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.home-btn:hover {
-  background: #f87171;
 }
 
 .ash {
@@ -63,6 +48,16 @@ body {
 }
 
 h1 { font-size: 42px; }
+
+.home-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #b36b2c;
+  color: white;
+  cursor: pointer;
+}
 
 input, select {
   width: 100%;
@@ -119,6 +114,10 @@ input, select {
   cursor: pointer;
 }
 
+.item-info {
+  flex: 1;
+}
+
 .item-info h2 {
   margin: 0;
   font-size: 20px;
@@ -129,6 +128,21 @@ input, select {
   color: #a1a1aa;
   font-style: italic;
   font-size: 15px;
+}
+
+.note-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #3f3f46;
+  color: #fca5a5;
+  border-radius: 8px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.note-btn:hover {
+  background: #27272a;
 }
 
 .tooltip {
@@ -273,6 +287,21 @@ input, select {
   text-shadow: 1px 1px 2px black;
 }
 
+.note-box {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 14px;
+  padding: 25px;
+  max-width: 480px;
+  color: white;
+  text-align: center;
+  z-index: 1001;
+}
+
+.note-box p {
+  line-height: 1.5;
+}
+
 .top-btn {
   position: fixed;
   right: 20px;
@@ -303,6 +332,7 @@ input, select {
 
 <div class="page">
   <h1>Traduzioni Sekiro</h1>
+  <button class="home-btn" onclick="goHome()">← Home</button>
   <p>Archivio personale delle descrizioni tradotte.</p>
 
   <div class="controls">
@@ -343,6 +373,14 @@ input, select {
   </div>
 </div>
 
+<div id="noteOverlay" class="overlay">
+  <div class="note-box" onclick="event.stopPropagation()">
+    <h2>Nota</h2>
+    <p id="noteText"></p>
+    <button class="sekiro-btn" onclick="chiudiNote()">OK</button>
+  </div>
+</div>
+
 <button class="top-btn" id="topBtn">↑</button>
 
 <script>
@@ -353,7 +391,7 @@ const traduzioni = [
     nomeOriginale: "瓢箪の種",
     letturaOriginale: "Hyōtan no tane",
     nomeVecchio: "Gourd Seed",
-    icona: "http://sekirothegame.wdfiles.com/local--files/consumables/gourdheal1.png",
+    icona: "https://via.placeholder.com/96",
     descrizioneOriginale: "A seed from which healing gourd medicine can be harvested.",
     traduzione: "Un seme da cui è possibile ricavare la medicina della Zucca curativa.",
     note: ""
@@ -367,7 +405,7 @@ const traduzioni = [
     icona: "https://via.placeholder.com/96",
     descrizioneOriginale: "A heavy, black iron axe used by shinobi. Can be fitted to the Shinobi Prosthetic to become a working Prosthetic Tool.",
     traduzione: "Una pesante ascia di ferro nero usata dagli shinobi. Può essere montata sulla Protesi Shinobi per diventare uno strumento prostetico funzionante.",
-    note: "Questa ascia rozza viene usata meno per tagliare e più per spezzare le cose con il suo peso."
+    note: "Questa è una nota opzionale. Se il campo note è vuoto, il tastino non appare."
   },
   {
     categoria: "Tecniche",
@@ -415,6 +453,9 @@ const detailText = document.getElementById("detailText");
 const detailClose = document.getElementById("detailClose");
 const showOriginalBtn = document.getElementById("showOriginalBtn");
 
+const noteOverlay = document.getElementById("noteOverlay");
+const noteText = document.getElementById("noteText");
+
 let zoom = 1;
 
 function goHome() {
@@ -429,13 +470,9 @@ function resetZoom() {
 overlayImg.onwheel = (event) => {
   event.preventDefault();
 
-  if (event.deltaY < 0) {
-    zoom += 0.1;
-  } else {
-    zoom -= 0.1;
-  }
-
+  zoom += event.deltaY < 0 ? 0.1 : -0.1;
   zoom = Math.max(0.5, Math.min(zoom, 4));
+
   overlayImg.style.transform = `scale(${zoom})`;
 };
 
@@ -457,6 +494,16 @@ function creaCenere() {
   }
 }
 
+function apriNote(event, testo) {
+  event.stopPropagation();
+  noteText.textContent = testo;
+  noteOverlay.classList.add("active");
+}
+
+function chiudiNote() {
+  noteOverlay.classList.remove("active");
+}
+
 function apriDettaglio(item) {
   let statoOriginale = false;
 
@@ -465,7 +512,6 @@ function apriDettaglio(item) {
 
   detailText.innerHTML = `
     <p>${item.traduzione || item.note || ""}</p>
-    ${item.note && item.traduzione ? `<p>${item.note}</p>` : ""}
   `;
 
   showOriginalBtn.textContent = "Mostra originale";
@@ -484,7 +530,6 @@ function apriDettaglio(item) {
       detailTitle.textContent = item.nome;
       detailText.innerHTML = `
         <p>${item.traduzione || item.note || ""}</p>
-        ${item.note && item.traduzione ? `<p>${item.note}</p>` : ""}
       `;
       showOriginalBtn.textContent = "Mostra originale";
     }
@@ -547,9 +592,16 @@ function mostra() {
             </h3>
           ` : ""}
         </div>
+
+        ${item.note ? `
+          <button class="note-btn" onclick='apriNote(event, ${JSON.stringify(item.note)})'>
+            📝
+          </button>
+        ` : ""}
       `;
 
       div.onclick = () => apriDettaglio(item);
+
       lista.appendChild(div);
     });
 
@@ -561,6 +613,8 @@ overlay.onclick = () => {
   overlay.classList.remove("active");
   resetZoom();
 };
+
+noteOverlay.onclick = chiudiNote;
 
 detailOverlay.onclick = (event) => {
   if (event.target === detailOverlay) {
