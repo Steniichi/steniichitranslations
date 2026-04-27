@@ -7,6 +7,9 @@
 
 <style>
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: Arial, sans-serif;
   background: url("img/home_background.png") no-repeat center center fixed;
@@ -72,11 +75,13 @@ body {
 .page {
   position: relative;
   z-index: 2;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 40px;
   background: rgba(0,0,0,0.8);
   border-radius: 20px;
+
+  flex: 1;
 }
 
 h1 {
@@ -91,8 +96,20 @@ p {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -141,17 +158,19 @@ p {
 }
 
 .about {
-  margin-top: 40px;
+  margin: 0;
   padding: 20px;
 
-  background: rgba(0,0,0,0.85); /* 👈 sfondo nero */
-  border: 1px solid #3f3f46;
-  border-radius: 12px;
+  background: rgba(0,0,0,0.85);
+  border-top: 1px solid #3f3f46;
+  border-radius: 0;
 
   display: flex;
   align-items: center;
   gap: 15px;
 
+  position: relative;
+  z-index: 2;
 }
 
 .about img {
@@ -173,23 +192,6 @@ p {
   color: #a1a1aa;
 }
 
-@media (max-width: 600px) {
-  .page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #contenuto {
-    flex: 1;
-  }
-
-  .about {
-    flex-direction: column;
-    text-align: center;
-    margin-top: auto; /* 👈 la spinge in fondo */
-  }
-}
 </style>
 </head>
 

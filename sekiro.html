@@ -10,6 +10,10 @@
 body {
 
   margin: 0;
+  min-height: 100vh; /* 👈 AGGIUNGI */
+  display: flex;      /* 👈 AGGIUNGI */
+  flex-direction: column; /* 👈 AGGIUNGI */
+
   background: url("img/sekiro_background.webp") no-repeat center center fixed;
   background-size: cover;
   color: #f4f4f5;
@@ -91,12 +95,26 @@ body {
 .page {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  width: calc(100% - 80px);
+  max-width: 1000px;
   margin: 40px auto;
   padding: 35px 25px;
   background: rgba(0,0,0,0.8);
   border-radius: 20px;
   backdrop-filter: blur(6px);
+
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .page {
+    width: calc(100% - 30px);
+  }
+}
+
+.about {
+  margin: 0;
+  border-radius: 0;
 }
 
 h1 { font-size: 42px; }
