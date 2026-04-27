@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Traduzioni Sekiro</title>
+<button class="home-btn" onclick="goHome()">← Home</button>
+
+<style>
+body {
+  margin: 0;
+  background: url("https://i.pcmag.com/imagery/reviews/015s7W8bORumChblqFNWD34-1..v1569469930.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f5;
+  font-family: Arial, sans-serif;
+}
+
+.home-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #fca5a5;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-btn:hover {
+  background: #f87171;
+}
+
+.ash {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translate(0, -20px); }
+  50% { transform: translate(35px, 50vh); }
+  100% { transform: translate(-25px, 110vh); }
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 35px 25px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+h1 { font-size: 42px; }
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 25px;
+  background: #18181b;
+  color: white;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 15px;
+}
+
+.categoria-titolo {
+  margin-top: 30px;
+  color: #fca5a5;
+  border-bottom: 1px solid #3f3f46;
+  padding-bottom: 8px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(24,24,27,0.95);
+  border: 1px solid #27272a;
+  border-radius: 14px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item-row:hover {
+  border-color: #fca5a5;
+  transform: translateX(4px);
+}
+
+.item-row img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.item-info h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.item-info h3 {
+  margin: 4px 0 0;
+  color: #a1a1aa;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip:hover::after {
+  content: attr(data-lettura);
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #09090b;
+  color: #fca5a5;
+  border: 1px solid #3f3f46;
+  border-radius: 8px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.15s ease;
+  cursor: zoom-in;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.78);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  padding: 20px;
+}
+
+.detail-overlay.active {
+  display: flex;
+}
+
+.sekiro-panel {
+  width: min(850px, 95vw);
+  height: min(680px, 90vh);
+  background: #b5aa91;
+  color: #eee8dc;
+  border: 8px solid #6f5d35;
+  box-shadow: inset 0 0 55px rgba(0,0,0,0.65), 0 0 45px rgba(0,0,0,0.85);
+  position: relative;
+  padding: 32px 40px 80px;
+  font-family: Georgia, "Times New Roman", serif;
+  box-sizing: border-box;
+}
+
+.sekiro-title {
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.78), transparent);
+  color: #f3eee7;
+  font-size: 28px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sekiro-content {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 30px;
+}
+
+.sekiro-icon-box {
+  width: 170px;
+  height: 170px;
+  background: #111;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 30px black;
+}
+
+.sekiro-icon-box img {
+  max-width: 125px;
+  max-height: 125px;
+  cursor: zoom-in;
+}
+
+.sekiro-text {
+  font-size: 21px;
+  line-height: 1.5;
+  color: #eee8dc;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+  max-height: 390px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.popup-buttons {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.sekiro-btn {
+  min-width: 140px;
+  padding: 8px 24px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(90deg, transparent, #b36b2c, transparent);
+  cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+}
+
+.top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: #fca5a5;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  .controls, .sekiro-content {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="ash"></div>
+
+<div class="page">
+  <h1>Traduzioni Sekiro</h1>
+  <p>Archivio personale delle descrizioni tradotte.</p>
+
+  <div class="controls">
+    <input id="search" placeholder="Cerca per nome tradotto, giapponese, lettura o nome vecchio...">
+
+    <select id="category">
+      <option value="Tutte">Tutte</option>
+      <option value="Oggetti">Oggetti</option>
+      <option value="Tecniche">Tecniche</option>
+      <option value="Personaggi">Personaggi</option>
+      <option value="Luoghi">Luoghi</option>
+    </select>
+  </div>
+
+  <div id="contenuto"></div>
+</div>
+
+<div id="overlay" class="overlay">
+  <img id="overlay-img">
+</div>
+
+<div id="detailOverlay" class="detail-overlay">
+  <div class="sekiro-panel">
+    <div id="detailTitle" class="sekiro-title"></div>
+
+    <div class="sekiro-content">
+      <div class="sekiro-icon-box">
+        <img id="detailImg">
+      </div>
+
+      <div id="detailText" class="sekiro-text"></div>
+    </div>
+
+    <div class="popup-buttons">
+      <button id="showOriginalBtn" class="sekiro-btn">Mostra originale</button>
+      <button id="detailClose" class="sekiro-btn">OK</button>
+    </div>
+  </div>
+</div>
+
+<button class="top-btn" id="topBtn">↑</button>
+
+<script>
+const traduzioni = [
+  {
+    categoria: "Oggetti",
+    nome: "Seme di Zucca",
+    nomeOriginale: "瓢箪の種",
+    letturaOriginale: "Hyōtan no tane",
+    nomeVecchio: "Gourd Seed",
+    icona: "http://sekirothegame.wdfiles.com/local--files/consumables/gourdheal1.png",
+    descrizioneOriginale: "A seed from which healing gourd medicine can be harvested.",
+    traduzione: "Un seme da cui è possibile ricavare la medicina della Zucca curativa.",
+    note: ""
+  },
+  {
+    categoria: "Oggetti",
+    nome: "Ascia shinobi della Scimmia",
+    nomeOriginale: "忍び斧",
+    letturaOriginale: "Shinobi ono",
+    nomeVecchio: "Shinobi Axe of the Monkey",
+    icona: "https://via.placeholder.com/96",
+    descrizioneOriginale: "A heavy, black iron axe used by shinobi. Can be fitted to the Shinobi Prosthetic to become a working Prosthetic Tool.",
+    traduzione: "Una pesante ascia di ferro nero usata dagli shinobi. Può essere montata sulla Protesi Shinobi per diventare uno strumento prostetico funzionante.",
+    note: "Questa ascia rozza viene usata meno per tagliare e più per spezzare le cose con il suo peso."
+  },
+  {
+    categoria: "Tecniche",
+    nome: "Shuriken caricato",
+    nomeOriginale: "手裏剣",
+    letturaOriginale: "Shuriken",
+    nomeVecchio: "Loaded Shuriken",
+    icona: "https://via.placeholder.com/96",
+    descrizioneOriginale: "A Prosthetic Tool fitted with a mechanism to launch shuriken.",
+    traduzione: "Uno strumento prostetico dotato di un meccanismo per lanciare shuriken.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Lupo",
+    nomeOriginale: "狼",
+    letturaOriginale: "Ōkami",
+    nomeVecchio: "Wolf",
+    icona: "https://via.placeholder.com/96",
+    note: "Protagonista del gioco."
+  },
+  {
+    categoria: "Luoghi",
+    nome: "Ashina",
+    nomeOriginale: "葦名",
+    letturaOriginale: "Ashina",
+    nomeVecchio: "Ashina",
+    icona: "https://via.placeholder.com/96",
+    note: "Territorio centrale della storia."
+  }
+];
+
+const contenuto = document.getElementById("contenuto");
+const search = document.getElementById("search");
+const category = document.getElementById("category");
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const topBtn = document.getElementById("topBtn");
+const ash = document.querySelector(".ash");
+
+const detailOverlay = document.getElementById("detailOverlay");
+const detailTitle = document.getElementById("detailTitle");
+const detailImg = document.getElementById("detailImg");
+const detailText = document.getElementById("detailText");
+const detailClose = document.getElementById("detailClose");
+const showOriginalBtn = document.getElementById("showOriginalBtn");
+
+let zoom = 1;
+
+function goHome() {
+  window.location.href = "index.html";
+}
+
+function resetZoom() {
+  zoom = 1;
+  overlayImg.style.transform = "scale(1)";
+}
+
+overlayImg.onwheel = (event) => {
+  event.preventDefault();
+
+  if (event.deltaY < 0) {
+    zoom += 0.1;
+  } else {
+    zoom -= 0.1;
+  }
+
+  zoom = Math.max(0.5, Math.min(zoom, 4));
+  overlayImg.style.transform = `scale(${zoom})`;
+};
+
+function creaCenere() {
+  for (let i = 0; i < 90; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+
+    const size = 2 + Math.random() * 4;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.top = (-Math.random() * 120) + "px";
+    p.style.opacity = 0.25 + Math.random() * 0.65;
+    p.style.animationDuration = (6 + Math.random() * 12) + "s";
+    p.style.animationDelay = Math.random() * 10 + "s";
+
+    ash.appendChild(p);
+  }
+}
+
+function apriDettaglio(item) {
+  let statoOriginale = false;
+
+  detailTitle.textContent = item.nome;
+  detailImg.src = item.icona;
+
+  detailText.innerHTML = `
+    <p>${item.traduzione || item.note || ""}</p>
+    ${item.note && item.traduzione ? `<p>${item.note}</p>` : ""}
+  `;
+
+  showOriginalBtn.textContent = "Mostra originale";
+  showOriginalBtn.style.display = "inline-block";
+
+  showOriginalBtn.onclick = () => {
+    statoOriginale = !statoOriginale;
+
+    if (statoOriginale) {
+      detailTitle.textContent = item.nomeOriginale || item.nome;
+      detailText.innerHTML = `
+        <p>${item.descrizioneOriginale || item.nomeVecchio || item.nomeOriginale || ""}</p>
+      `;
+      showOriginalBtn.textContent = "Mostra traduzione";
+    } else {
+      detailTitle.textContent = item.nome;
+      detailText.innerHTML = `
+        <p>${item.traduzione || item.note || ""}</p>
+        ${item.note && item.traduzione ? `<p>${item.note}</p>` : ""}
+      `;
+      showOriginalBtn.textContent = "Mostra originale";
+    }
+  };
+
+  detailImg.onclick = () => {
+    overlay.classList.add("active");
+    overlayImg.src = item.icona;
+    resetZoom();
+  };
+
+  detailOverlay.classList.add("active");
+}
+
+function mostra() {
+  const testo = search.value.toLowerCase();
+  const categoriaScelta = category.value;
+
+  const filtrati = traduzioni.filter(item => {
+    const matchTesto =
+      item.nome.toLowerCase().includes(testo) ||
+      item.nomeOriginale.toLowerCase().includes(testo) ||
+      (item.letturaOriginale || "").toLowerCase().includes(testo) ||
+      (item.nomeVecchio || "").toLowerCase().includes(testo);
+
+    const matchCategoria =
+      categoriaScelta === "Tutte" || item.categoria === categoriaScelta;
+
+    return matchTesto && matchCategoria;
+  });
+
+  const categorie = ["Oggetti", "Tecniche", "Personaggi", "Luoghi"];
+  contenuto.innerHTML = "";
+
+  categorie.forEach(cat => {
+    const items = filtrati.filter(item => item.categoria === cat);
+    if (items.length === 0) return;
+
+    const titolo = document.createElement("h2");
+    titolo.className = "categoria-titolo";
+    titolo.textContent = cat;
+    contenuto.appendChild(titolo);
+
+    const lista = document.createElement("div");
+    lista.className = "lista";
+
+    items.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "item-row";
+
+      div.innerHTML = `
+        <img src="${item.icona}" alt="${item.nome}">
+        <div class="item-info">
+          <h2>${item.nome}</h2>
+          ${item.nomeOriginale ? `
+            <h3>
+              <span class="tooltip" data-lettura="${item.letturaOriginale || 'Lettura non inserita'}">
+                ${item.nomeOriginale}
+              </span>
+            </h3>
+          ` : ""}
+        </div>
+      `;
+
+      div.onclick = () => apriDettaglio(item);
+      lista.appendChild(div);
+    });
+
+    contenuto.appendChild(lista);
+  });
+}
+
+overlay.onclick = () => {
+  overlay.classList.remove("active");
+  resetZoom();
+};
+
+detailOverlay.onclick = (event) => {
+  if (event.target === detailOverlay) {
+    detailOverlay.classList.remove("active");
+  }
+};
+
+detailClose.onclick = () => {
+  detailOverlay.classList.remove("active");
+};
+
+window.onscroll = () => {
+  topBtn.style.display = window.scrollY > 250 ? "block" : "none";
+};
+
+topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+search.oninput = mostra;
+category.onchange = mostra;
+
+creaCenere();
+mostra();
+</script>
+
+</body>
+</html>
