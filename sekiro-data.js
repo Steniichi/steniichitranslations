@@ -105,8 +105,19 @@ const traduzioni = [
     letturaOriginale: "Ashinajō honjō",
     nomeVecchio: "Castello Ashina",
     icona: "img/sekiro_area/ashina_castle.png",
-	descrizioneOriginale: "鬼仏：<br><br>1. 葦名城　本城<br>2. 天守上階　武者侍り<br>3. 天守上階　葦名流伝場<br>4. 天守望楼<br>",
-	traduzione: "Onibotoke:<br><br>1. Castello di Ashina - Castello principale<br>2. Piano superiore del tenshu - Riposo dei guerrieri<br>3. Piano superiore del tenshu -  Denjo dello stile Ashina<br>4. Osservatorio del tenshu<br>",
+	descrizioneOriginale: "鬼仏：<br><br>1. 葦名城　本城<br>2. 天守上階　武者侍り<br>3. 天守上階　葦名流伝場<br>4. 天守望楼<br>5. 天守上階　御子の間<br>6. 名残り墓<br>7. 白蛇の社<br>8. 捨て牢入口<br>9. 葦名城　水手曲輪<br>10. 抜け穴前",
+	traduzione: "Onibotoke:<br><br>1. Castello di Ashina - Castello principale<br>2. Piano superiore del tenshu - Riposo dei guerrieri<br>3. Piano superiore del tenshu -  Denjo dello stile Ashina<br>4. Osservatorio del tenshu<br>5. Piano superiore del tenshu - Stanza del Miko<br>6. Resti di tombe<br>7. Santuario della Serpe Albina<br>8. Entrata della prigione abbandonata<br>9. Castello di Ashina - Kuruwa dei marinai<br>10. Davanti al passaggio sotterraneo",
+    note: ""
+  },
+  {
+    categoria: "Luoghi",
+    nome: "Prigione abbandonata",
+    nomeOriginale: "捨て牢",
+    letturaOriginale: "Suterō",
+    nomeVecchio: "Segrete",
+    icona: "img/sekiro_area/dungeon.png",
+	descrizioneOriginale: "鬼仏：<br><br>1. 地下水路<br>2. 天守上階　武者侍り",
+	traduzione: "Onibotoke:<br><br>1. Canale sotterraneo<br>2. Luogo in cui buttarsi nella morte",
     note: ""
   },
   {
