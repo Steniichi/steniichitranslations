@@ -12,14 +12,14 @@ const traduzioni = [
   },
   {
     categoria: "Oggetti",
-    nome: "Fushigiri",
-    nomeOriginale: "不死斬り",
-    letturaOriginale: "Fushigiri",
-    nomeVecchio: "Lama Mortale",
-    icona: "img/sekiro_items/mortalblade.png",
-    descrizioneOriginale: "死なぬ者さえ殺す大太刀<br>その赤き刃は、刀を抜いた者を一度殺す<br>回生の力なくば、不死斬りの主とはなれぬ<br><br>不死斬りならば、<br>蟲憑きにとどめ忍殺をすることができる<br><br>この刀は、長く仙峯寺に秘匿されていた<br>刻まれた銘は、「拝涙」<br>それがこの刀の真の名だ",
-    traduzione: "Un'ōdachi in grado di uccidere persino gli immortali. La lama rossa uccide chiunque la sguaini, perciò, senza il potere della resurrezione, non si può diventare suoi proprietari.<br><br>Con la Fushigiri si può eseguire un assassinio shinobi sugli ospiti dell'insetto.<br><br>Questa katana è rimasta nascosta nel tempio Senpo per molto tempo. Sopra vi è inciso “拝涙” (lacrima venerata), il vero nome della katana.",
-    note: "Significa letteralmente “ammazza-immortali”. Il kanji fushi (不死) è lo stesso utilizzato in Dark Souls per indicare gli immortali."
+    nome: "Loto d'acqua fragrante",
+    nomeOriginale: "馨し水蓮",
+    letturaOriginale: "Kaguwashi suiren",
+    nomeVecchio: "Loto del palazzo",
+    icona: "img/sekiro_items/lotus.png",
+    descrizioneOriginale: "落ち谷の奥に咲いていた、青白い蓮の花<br>源の水が濃く溜まる場に咲くもの<br><br>雌の猿は、この花の香りを好む<br>ゆえに獅子猿は、大切に育てていた<br>己のつがいに供えるために<br><br>この花は源の香気を生む、香の材料の一つ<br>不死断ちのために、御子が求めるものだ",
+    traduzione: "Fiore di loto pallido che sboccia nelle profondità della Valle delle Cadute. Fioriscono nei punti in cui le Acque della Sorgente si accumulano.<br><br>Le scimmie femmine amano la fragranza di questi fiori. Per questo motivo, la Scimmia Leonina lo stava facendo crescere con cura, per poterlo offrire alla propria compagna.<br><br>Questo fiore emana la fragranza della Sorgente ed è uno degli ingredienti dell'incenso. Il Miko lo cerca per recidere l'immortalità.",
+    note: ""
   },
   {
     categoria: "Oggetti",
