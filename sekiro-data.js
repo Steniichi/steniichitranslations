@@ -100,9 +100,9 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
-    nome: "Hanbei, l'immortale",
+    nome: "Hanbē, l'immortale",
     nomeOriginale: "死なず半兵衛",
-    letturaOriginale: "Shinazu Henbei",
+    letturaOriginale: "Shinazu Hanbē",
     nomeVecchio: "Hanbei, il Non-morto",
     icona: "img/sekiro_chara/hanbei.webp",
 	descrizioneOriginale: "",
@@ -135,11 +135,11 @@ const traduzioni = [
     categoria: "Personaggi",
     nome: "Miko della Giovinezza",
     nomeOriginale: "変若の御子",
-    letturaOriginale: "Ōkami - Sekirō",
+    letturaOriginale: "Ochi no Miko",
     nomeVecchio: "Fanciulla celeste",
-    icona: "img/sekiro_chara/sekiro.webp",
+    icona: "img/sekiro_chara/rejuvenation.webp",
 	descrizioneOriginale: "",
-	traduzione: "Il Lupo, conosciuto anche come Sekiro, è il protagonista del gioco. È uno shinobi al servizio di Kuro, il Miko del Lignaggio del Drago.",
+	traduzione: "È l'ultima Miko rimasta in vita a possedere il falso Lignaggio del Drago, creato dai monaci del tempio Senpō dopo aver abbandonato la loro fede nella ricercare dell'immortalità.",
     note: ""
   },
   {
