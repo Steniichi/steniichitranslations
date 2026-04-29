@@ -30,7 +30,7 @@ const traduzioni = [
     icona: "img/sekiro_items/emblem.png",
     descrizioneOriginale: "ただよう白い形代<br><br>人に限ったことではないが、<br>何か心残りがあれば、その想いが<br>幻として形を取って見えることがある<br><br>義手忍具など、形代を消費することで<br>使えるアクションがある",
     traduzione: "Katashiro bianco e fluttuante.<br><br>Se permane qualche forma di rimpianto, esso può assumere una forma fugace ma visibile. Non è un fenomeno esclusivo degli esseri umani.<br><br>Alcune azioni richiedono il consumo di Katashiro, come l’uso degli strumenti shinobi protesici.",
-    note: ""
+    note: "I katashiro sono bambole di carta utilizzate nei rituali shintoisti come sostituti simbolici degli esseri umani, su cui vengono trasferiti peccati e impurità (kegare)."
   },
   {
     categoria: "Oggetti",
@@ -89,11 +89,22 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
+    nome: "Busshi",
+    nomeOriginale: "仏師",
+    letturaOriginale: "Busshi",
+    nomeVecchio: "Scultore",
+    icona: "img/sekiro_chara/Sculptor.webp",
+	descrizioneOriginale: "",
+	traduzione: "Eremita che vive nel tempio in rovina, dove trascorre il tempo intagliando statue di Buddha nel legno. Salvò il Lupo dopo la sconfitta contro Gen'ichiro e gli donò la sua protesi shinobi.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
     nome: "Hanbei, l'immortale",
     nomeOriginale: "死なず半兵衛",
     letturaOriginale: "Shinazu Henbei",
     nomeVecchio: "Hanbei, il Non-morto",
-    icona: "img/sekiro_chara/henbei.png",
+    icona: "img/sekiro_chara/hanbei.webp",
 	descrizioneOriginale: "",
 	traduzione: "Vive nei pressi del tempio in rovina e funge da compagno di allenamento per il Lupo, aiutandolo ad affinare le sue tecniche di assassinio, poiché è incapace di morire.",
     note: ""
@@ -104,7 +115,7 @@ const traduzioni = [
     nomeOriginale: "御子　九郎",
     letturaOriginale: "Miko Kurō",
     nomeVecchio: "Kuro, l'Erede Divino",
-    icona: "img/sekiro_chara/kuro.png",
+    icona: "img/sekiro_chara/kuro.webp",
 	descrizioneOriginale: "",
 	traduzione: "Detentore del misterioso potere del Lignaggio del Drago e colui che il Lupo deve proteggere. Fu adottato e cresciuto dal clan Hirata, un ramo cadetto del clan Ashina.",
     note: ""
@@ -115,9 +126,31 @@ const traduzioni = [
     nomeOriginale: "狼 - 隻狼",
     letturaOriginale: "Ōkami - Sekirō",
     nomeVecchio: "Lupo - Sekiro",
-    icona: "img/sekiro_chara/sekiro.png",
+    icona: "img/sekiro_chara/sekiro.webp",
 	descrizioneOriginale: "",
 	traduzione: "Il Lupo, conosciuto anche come Sekiro, è il protagonista del gioco. È uno shinobi al servizio di Kuro, il Miko del Lignaggio del Drago.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Miko della Giovinezza",
+    nomeOriginale: "変若の御子",
+    letturaOriginale: "Ōkami - Sekirō",
+    nomeVecchio: "Fanciulla celeste",
+    icona: "img/sekiro_chara/sekiro.webp",
+	descrizioneOriginale: "",
+	traduzione: "Il Lupo, conosciuto anche come Sekiro, è il protagonista del gioco. È uno shinobi al servizio di Kuro, il Miko del Lignaggio del Drago.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Monaco del corridoio illusorio",
+    nomeOriginale: "幻廊の僧",
+    letturaOriginale: "Genrō no sō",
+    nomeVecchio: "Monaco delle Sale dell'Illusione",
+    icona: "img/sekiro_chara/Illusory_Hall_Monk.webp",
+	descrizioneOriginale: "",
+	traduzione: "Monaco che medita nel corridoio illusorio. A differenza degli altri monaci del tempio Senpō, non si è lasciato corrompere dalla ricerca dell’immortalità.",
     note: ""
   },
   {
