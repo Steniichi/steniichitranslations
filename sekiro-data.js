@@ -139,7 +139,7 @@ const traduzioni = [
     nomeVecchio: "Lupo - Sekiro",
     icona: "img/sekiro_chara/sekiro.webp",
 	descrizioneOriginale: "",
-	traduzione: "Il Lupo, conosciuto anche come Sekiro, è il protagonista del gioco. È uno shinobi al servizio di Kuro, il Miko del Lignaggio del Drago.",
+	traduzione: "Il Lupo, conosciuto anche come Sekiro, è il protagonista del gioco. In giovane età fu trovato su un campo di battaglia dal Gufo, che lo prese con sé e lo addestrò per farne uno shinobi. Il suo padre adottivo gli diede il compito di proteggere il Miko del Lignaggio del Drago.",
     note: ""
   },
   {
