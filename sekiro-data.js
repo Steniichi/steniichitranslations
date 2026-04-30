@@ -122,7 +122,7 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
-    nome: "Hanbē, l'immortale",
+    nome: "Hanbē l'immortale",
     nomeOriginale: "死なず半兵衛",
     letturaOriginale: "Shinazu Hanbē",
     nomeVecchio: "Hanbei, il Non-morto",
@@ -133,7 +133,7 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
-    nome: "Kurō, il Miko",
+    nome: "Kurō il Miko",
     nomeOriginale: "御子　九郎",
     letturaOriginale: "Miko Kurō",
     nomeVecchio: "Kuro, l'Erede Divino",
