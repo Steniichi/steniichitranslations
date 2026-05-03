@@ -275,6 +275,28 @@ const traduzioni = [
     note: ""
   },
   {
+    categoria: "Personaggi",
+    nome: "Shōsuke, testa di cesto",
+    nomeOriginale: "籠かぶりの正助",
+    letturaOriginale: "Kagokaburi no Shōsuke",
+    nomeVecchio: "Shosuke il cestaio",
+    icona: "img/sekiro_chara/shosuke.webp",
+	descrizioneOriginale: "",
+	traduzione: "Uomo spaventato del villaggio Mibu che nasconde la testa in un cesto.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Tasso dei Kasa Neri",
+    nomeOriginale: "黒笠のムジナ",
+    letturaOriginale: "Kurokasa no Mujina",
+    nomeVecchio: "Tasso Testanera",
+    icona: "img/sekiro_chara/tasso.webp",
+	descrizioneOriginale: "",
+	traduzione: "Fuggitivo dei Kasa Neri.",
+    note: ""
+  },
+  {
     categoria: "Luoghi",
     nome: "Castello di Ashina - Castello principale",
     nomeOriginale: "葦名城　本城",
