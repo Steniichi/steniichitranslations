@@ -111,6 +111,72 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
+    nome: "Commemorante ai margini del villaggio",
+    nomeOriginale: "村外れの供養衆",
+    letturaOriginale: "Murahazure no kuyōshū",
+    nomeVecchio: "Adepto esiliato",
+    icona: "img/sekiro_chara/villaggio.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Commemorante del letto di corvi",
+    nomeOriginale: "鴉の寝床の供養衆",
+    letturaOriginale: "Karasu no nedoko no kuyōshū",
+    nomeVecchio: "Adepto del nido di corvi",
+    icona: "img/sekiro_chara/corvi.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Commemorante del pantano velenoso",
+    nomeOriginale: "毒だまりの供養衆",
+    letturaOriginale: "Dokudamari no kuyōshū",
+    nomeVecchio: "Adepto intossicato",
+    icona: "img/sekiro_chara/pantano.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Commemorante della prigione abbandonata",
+    nomeOriginale: "捨て牢の供養衆",
+    letturaOriginale: "Suterō no kuyōshū",
+    nomeVecchio: "Adepto delle segrete",
+    icona: "img/sekiro_chara/prigione.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Commemorante dello Shugendō",
+    nomeOriginale: "修験道の供養衆",
+    letturaOriginale: "Shugendō no kuyōshū",
+    nomeVecchio: "Adepto di Shugendo",
+    icona: "img/sekiro_chara/shugendo.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
+    nome: "Commemorante vicino al campo di battaglia",
+    nomeOriginale: "戦場そばの供養衆",
+    letturaOriginale: "Senjō soba no kuyōshū",
+    nomeVecchio: "Adepto del campo di battaglia",
+    icona: "img/sekiro_chara/campo.webp",
+	descrizioneOriginale: "",
+	traduzione: "Membro dei Commemoranti, dediti alla vendita di offerte rituali per i defunti.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
     nome: "Ema la dottoressa",
     nomeOriginale: "薬師エマ",
     letturaOriginale: "Kusushi Ema",
