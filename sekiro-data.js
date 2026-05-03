@@ -122,6 +122,17 @@ const traduzioni = [
   },
   {
     categoria: "Personaggi",
+    nome: "Fujioka l'informatore",
+    nomeOriginale: "情報屋の藤岡",
+    letturaOriginale: "Jōhōya no Fujioka",
+    nomeVecchio: "Fujioka l'Informatore",
+    icona: "img/sekiro_chara/fujioka.webp",
+	descrizioneOriginale: "",
+	traduzione: "Ex membro dei Commemoranti, che si è poi dedicato al commercio di informazioni.",
+    note: ""
+  },
+  {
+    categoria: "Personaggi",
     nome: "Hanbē l'immortale",
     nomeOriginale: "死なず半兵衛",
     letturaOriginale: "Shinazu Hanbē",
