@@ -1,6 +1,17 @@
 const traduzioni = [
   {
     categoria: "Oggetti",
+    nome: "Cilindro karakuri",
+    nomeOriginale: "絡繰り筒",
+    letturaOriginale: "Karakuri tsutsu",
+    nomeVecchio: "Canna meccanica",
+    icona: "img/sekiro_items/gyoububarrel.png",
+    descrizioneOriginale: "絡繰り仕掛けの金属の筒<br><br>仏師に渡し忍義手に仕込めば、<br>強化義手忍具の作成が行えるようになる<br><br>忍義手をなす腕骨の内の空隙に、<br>ぴたりと嵌るように作られている<br><br>骨に芯が通れば、忍びの牙を<br>さらに研ぎ澄ますことができるだろう",
+    traduzione: "Cilindro metallico con un meccanismo karakuri.<br><br>Portandolo al Busshi e inserendolo nella protesi shinobi, permette di rinforzare gli strumenti shinobi protesici.<br><br>È costruito per incastrarsi perfettamente nello spazio vuoto all'interno dell'osso del polso della protesi.<br><br>Se il suo nucleo attraverserà l'osso, la zanna shinobi potrà essere affilata ancora di più.",
+    note: ""
+  },
+  {
+    categoria: "Oggetti",
     nome: "Fiori del Sakura Eterno",
     nomeOriginale: "常桜の花",
     letturaOriginale: "Tokozakura no hana",
