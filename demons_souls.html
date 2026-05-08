@@ -45,7 +45,7 @@
   gap: 24px;
 }
 .sekiro-panel.personaggio-panel .sekiro-text {
-  max-height: 560px;
+  max-height: calc(94vh - 260px);
 }
 .sekiro-panel.personaggio-panel .sekiro-icon-box {
   width: 105px;
@@ -410,6 +410,7 @@ input, select {
   font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
   box-sizing: border-box;
   animation: popupIn 0.22s ease;
+  overflow: hidden;
 }
 
 .sekiro-panel::before {
@@ -495,7 +496,9 @@ input, select {
   max-height: 360px;
   overflow-y: auto;
   padding-right: 14px;
-  padding-bottom: 90px;
+  max-height: calc(90vh - 260px);
+  overflow-y: auto;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
