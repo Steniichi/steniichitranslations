@@ -1,7 +1,7 @@
 const traduzioni = [
   {
     categoria: "Oggetti",
-    nome: "Agalmatolite del segno bianco",
+    nome: "Agalmatolite del Segno Bianco",
     nomeOriginale: "白いサインろう石",
     letturaOriginale: "shiroi sain rōseki",
     nomeVecchio: "Pietra bianca",
