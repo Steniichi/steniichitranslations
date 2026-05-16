@@ -22,6 +22,16 @@ const traduzioni = [
     note: ""
   },
   {
+    categoria: "Oggetti",
+    nome: "Globo dell'Occhio Rosso",
+    nomeOriginale: "赤い瞳のオーブ",
+    letturaOriginale: "akai hitomi no ōbu",
+    nomeVecchio: "Globo dell'occhio rosso",
+    icona: "img/dark1_items/globo_rosso.png",
+    descrizioneOriginale: "オンラインプレイ専用アイテム<br>他の世界に侵入する<br>（誓約者のみが使用でき、亡者では使用できない）<br><br>侵入先の世界で、世界の主を倒せば<br>人間性を得ることができる<br><br>カアスに唆された、ダークレイスたちの業<br>彼らは人間性を求め、さらなる闇に堕ちていく<br>あるいは、それこそが本来の人であろうか",
+    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Permette di invadere altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto, e non dai Morti Erranti.<br><br>Se riuscirai a sconfiggere il signore del mondo che hai invaso, otterrai Umanità.<br><br>Questa è l'arte dei Dark Wraith, sobillati da Kaath. Essi vanno a caccia di Umanità, sprofondando sempre più nell’Oscurità. È forse questa la vera natura dell’uomo?"
+  },
+  {
     categoria: "Armi",
     nome: "Daga",
     nomeOriginale: "ダガー",
