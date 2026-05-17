@@ -42,6 +42,16 @@ const traduzioni = [
     traduzione: "Quarzo nero concesso agli Immortali esiliati. Sin dai tempi antichi, è considerato un segno di separazione. Permette di rispedire nel loro mondo gli spiriti evocati, oppure di fare ritorno al proprio mondo da un altro in cui si è stati evocati.<br><br>Tuttavia, se attribuisci valore agli incontri, non dovresti farne uso con leggerezza."
   },
   {
+    categoria: "Oggetti",
+    nome: "Agalmatolite dei Consigli Arancioni",
+    nomeOriginale: "橙の助言ろう石",
+    letturaOriginale: "daidai no jogen rōseki",
+    nomeVecchio: "Pietra arancione",
+    icona: "img/dark1_items/pietra_arancione.png",
+    descrizioneOriginale: "オンラインプレイ専用アイテム<br>メッセージを書く／確認する／評価する<br><br>メッセージは他世界に送られ、評価される<br>他世界からのメッセージを評価することもできる<br><br>時の流れの淀んだロードランの地で<br>不死人たちがお互い支え合うための手段であり<br>また、騙し合うための手段でもある",
+    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Permette di scrivere, consultare e valutare messaggi.<br><br>I messaggi vengono inviati in altri mondi, dove possono essere valutati, ed è inoltre possibile valutare a propria volta quelli ricevuti.<br><br>È uno strumento attraverso cui gli Immortali si sostengono a vicenda nella terra di Lordran, dove lo scorrere del tempo è stagnante... ma anche un mezzo con cui possono ingannarsi reciprocamente."
+  },
+  {
     categoria: "Armi",
     nome: "Daga",
     nomeOriginale: "ダガー",
