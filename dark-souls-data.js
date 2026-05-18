@@ -29,7 +29,7 @@ const traduzioni = [
     nomeVecchio: "Globo dell'occhio rosso",
     icona: "img/dark1_items/globo_rosso.png",
     descrizioneOriginale: "オンラインプレイ専用アイテム<br>他の世界に侵入する<br>（誓約者のみが使用でき、亡者では使用できない）<br><br>侵入先の世界で、世界の主を倒せば<br>人間性を得ることができる<br><br>カアスに唆された、ダークレイスたちの業<br>彼らは人間性を求め、さらなる闇に堕ちていく<br>あるいは、それこそが本来の人であろうか",
-    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Permette di invadere altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto, e non dai Morti Erranti.<br><br>Se riuscirai a sconfiggere il signore del mondo che hai invaso, otterrai Umanità.<br><br>Questa è l'arte dei Dark Wraith, sobillati da Kaath. Essi vanno a caccia di Umanità, sprofondando sempre più nell’Oscurità. È forse questa la vera natura dell’uomo?"
+    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Permette di invadere altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto e non dai Morti Erranti.<br><br>Se riuscirai a sconfiggere il signore del mondo che hai invaso, otterrai Umanità.<br><br>Questa è l'arte dei Dark Wraith, sobillati da Kaath. Essi vanno a caccia di Umanità, sprofondando sempre più nell’Oscurità. È forse questa la vera natura dell’uomo?"
   },
   {
     categoria: "Oggetti",
@@ -60,6 +60,16 @@ const traduzioni = [
     icona: "img/dark1_items/registro_peccatori.png",
     descrizioneOriginale: "オンラインプレイ専用アイテム<br>世界の罪人たちを確認する<br><br>罪の女神ベルカの管理する記録帳<br>罪人とは、神々や誓約を蔑ろにした者たちであり<br>いつか暗月の刃に倒れる運命にある",
     traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Permette di identificare i peccatori del mondo.<br><br>Un registro presieduto da Velka, Dea del Peccato, in cui vengono annotati coloro che hanno oltraggiato le divinità e infranto i Voti: essi sono destinati, un giorno, a perire per mano delle Lame della Luna Oscura."
+  },
+  {
+    categoria: "Oggetti",
+    nome: "Occhio della Morte",
+    nomeOriginale: "死の瞳",
+    letturaOriginale: "shi no hitomi",
+    nomeVecchio: "Occhio della morte",
+    icona: "img/dark1_items/occhio_morte.png",
+    descrizioneOriginale: "オンラインプレイ専用アイテム<br>他の世界から霊体を誘い込む<br>（誓約者のみが使用でき、亡者では使用できない）<br><br>禍々しい「死の瞳」は、他の世界に災厄をばら撒き<br>犠牲者となる霊体を誘い込むための手段である<br>犠牲者は「死の瞳」を生み、災厄は更に広がるのだ",
+    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online.Attira spiriti da altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto e non dai Morti Erranti.<br><br>I nefasti Occhi della Morte seminano calamità negli altri mondi, attirando spiriti destinati a divenire vittime. Coloro che soccombono generano a loro volta altri Occhi della Morte, permettendo così alla calamità di propagarsi."
   },
   {
     categoria: "Armi",
