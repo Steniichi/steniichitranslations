@@ -69,7 +69,7 @@ const traduzioni = [
     nomeVecchio: "Occhio della morte",
     icona: "img/dark1_items/occhio_morte.png",
     descrizioneOriginale: "オンラインプレイ専用アイテム<br>他の世界から霊体を誘い込む<br>（誓約者のみが使用でき、亡者では使用できない）<br><br>禍々しい「死の瞳」は、他の世界に災厄をばら撒き<br>犠牲者となる霊体を誘い込むための手段である<br>犠牲者は「死の瞳」を生み、災厄は更に広がるのだ",
-    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online.Attira spiriti da altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto e non dai Morti Erranti.<br><br>I nefasti Occhi della Morte seminano calamità negli altri mondi, attirando spiriti destinati a divenire vittime. Coloro che soccombono generano a loro volta altri Occhi della Morte, permettendo così alla calamità di propagarsi."
+    traduzione: "Oggetto il cui utilizzo è legato esclusivamente all'online. Attira spiriti da altri mondi. Può essere usato soltanto da coloro che hanno prestato il Voto e non dai Morti Erranti.<br><br>I nefasti Occhi della Morte seminano calamità negli altri mondi, attirando spiriti destinati a divenire vittime. Coloro che soccombono generano a loro volta altri Occhi della Morte, permettendo così alla calamità di propagarsi."
   },
   {
     categoria: "Armi",
